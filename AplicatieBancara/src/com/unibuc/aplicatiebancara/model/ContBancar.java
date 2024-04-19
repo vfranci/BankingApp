@@ -22,7 +22,6 @@ public abstract class ContBancar {
         }
         this.iban = iban;
         this.sold = sold;
-        this.card = new CardBancar();
         this.tranzactii = new ArrayList<>();
 
         // Adaugă IBAN-ul contului în setul de IBAN-uri existente
@@ -91,7 +90,7 @@ public abstract class ContBancar {
             System.out.println("Tip card: " + card.getTip());
             System.out.println("CVV: " + card.getCvv());
         } else {
-            System.out.println("Contul nu are un card asociat.");
+            System.out.println("\nContul nu are un card asociat.");
         }
     }
 
