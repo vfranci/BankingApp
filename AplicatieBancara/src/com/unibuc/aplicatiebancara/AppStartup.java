@@ -44,6 +44,8 @@ public class AppStartup {
         ContBancar contRON2 = new ContRON("RO1314", 1605);
         ContBancar contRON3 = new ContRON("RO1516", 100);
 
+        contRON2.afiseazaDetaliiCard();
+
         List<ContBancar> conturi = new ArrayList<>();
         conturi.add(contRON1);
         conturi.add(contRON2);
@@ -74,6 +76,8 @@ public class AppStartup {
         for (ContBancar cont : conturiEUR) {
             System.out.println("IBAN: " + cont.getIban() + ", Sold: " + cont.getSold());
         }
+
+        // Asocierea unui client cu un cont
 
         Client c1 = new Client(1, "Andreea Marinescu", "andreea_m@gmail.com", "0722000000");
         c1.adaugaCont(contEUR1);
